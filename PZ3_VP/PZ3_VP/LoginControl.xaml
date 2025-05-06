@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="PZ3_VP.LoginControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="200" Width="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="UsernameTextBox" 
+                 Text="Введіть ім’я користувача"
+                 Foreground="Gray"
+                 Margin="0,0,0,10" Height="30" FontSize="14"
+                 GotFocus="UsernameTextBox_GotFocus"
+                 LostFocus="UsernameTextBox_LostFocus"/>
+
+        <PasswordBox x:Name="PasswordBox" 
+                     Margin="0,0,0,10" Height="30" FontSize="14"
+                     Grid.Row="1"/>
+
+        <Button x:Name="LoginButton" Grid.Row="2" Content="Увійти" Height="30" FontSize="14"
+                Click="LoginButton_Click"
+                Background="#4CAF50" Foreground="White"/>
+
+        <TextBlock x:Name="MessageTextBlock" Grid.Row="3" Margin="0,10,0,0"
+                   FontWeight="Bold"/>
+    </Grid>
+</UserControl>
